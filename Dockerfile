@@ -4,7 +4,7 @@ ENV KONG_CUSTOM_PLUGINS=rbac
 
 RUN apk add git
 RUN luarocks install kong-oidc-auth
-RUN luarocks install kong-plugin-rbac
+RUN luarocks install --server=http://luarocks.org/manifests/hhy5861 kong-plugin-rbac
 RUN apk del git
 
 ENTRYPOINT ["/docker-entrypoint.sh"]
