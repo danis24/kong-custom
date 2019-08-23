@@ -1,6 +1,6 @@
-FROM kong:1.2.2-alpine
+FROM kong:1.3.0-alpine
 
-ENV KONG_CUSTOM_PLUGINS=rbac
+ENV KONG_CUSTOM_PLUGINS=kong-oidc-auth,rbac
 
 RUN apk add git
 RUN luarocks install kong-oidc-auth
