@@ -2,7 +2,7 @@ FROM kong:1.0.0-alpine
 
 # ENV KONG_CUSTOM_PLUGINS 'kong-oidc-auth,rbac'
 
-RUN apk add git
+# RUN apk add git
 RUN luarocks install kong-oidc-auth
 RUN luarocks install --server=http://luarocks.org/manifests/hhy5861 kong-plugin-rbac
 # RUN apk del git
